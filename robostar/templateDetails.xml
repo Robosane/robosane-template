@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+        <name>RoboStar</name>
+        <version>9.2.0.3</version>
+        <creationDate>Jan 6th, 2015</creationDate>
+        <author>Ben Klein</author>
+        <authorEmail>robobenklein@gmail.com</authorEmail>
+        <copyright>Copyright (C) Ben Klein, 2014. GNU GPLv3. Please give credit if possible!</copyright>
+        <description>A Header and Column Template with a modern sleek look. Based off of Protostar.</description>
+        <files>
+                <filename>component.php</filename>
+                <filename>error.php</filename>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>css</folder>
+                <folder>html</folder>
+                <folder>images</folder>
+                <folder>img</folder>
+                <folder>js</folder>
+                <folder>language</folder>
+                <folder>less</folder>
+        </files>
+        <positions>
+                <position>banner</position>
+                <position>debug</position>
+                <position>position-0</position>
+                <position>position-1</position>
+                <position>position-2</position>
+                <position>position-3</position>
+                <position>position-4</position>
+                <position>position-5</position>
+                <position>position-6</position>
+                <position>position-7</position>
+                <position>position-8</position>
+                <position>position-9</position>
+                <position>position-10</position>
+                <position>position-11</position>
+                <position>position-12</position>
+                <position>position-13</position>
+                <position>position-14</position>
+                <position>footer</position>
+        </positions>
+        <languages folder="language">
+                <language tag="en-GB">en-GB/en-GB.tpl_protostar.ini</language>
+                <language tag="en-GB">en-GB/en-GB.tpl_protostar.sys.ini</language>
+        </languages>
+        <config>
+                <fields name="params">
+                        <fieldset name="advanced">
+                                <field name="templateColor" class="" type="color" default="#08C"
+                                        label="Template Color"
+                                        description="Choose an overall color for the site template. If left blank the Default (#0088CC) is used." />
+
+                                <field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+                                        label="Background Color"
+                                        description="Color displayed when there is no background image. Default (#F4F6F7)" />
+                                        
+                                <field name="templateBackgroundImage" class="" type="media" default=""
+                                        label="Background Image"
+                                        description="Image to use as background for the template." />
+
+                                <field name="logoFile" class="" type="media" default=""
+                                        label="Logo"
+                                        description="Upload a custom logo for the site template." />
+                                        
+                                <field name="sitetitle"  type="text" default=""
+                                        label="Title"
+                                        description="Alternative Page Title"
+                                        filter="string" />
+
+                                <field name="sitedescription"  type="text" default=""
+                                        label="Description"
+                                        description="Optional Text to Show as Subheading"
+                                        filter="string" />
+
+                                <field name="googleFont"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="Google Font for Headings"
+                                        description="Load a Google Font for Headings (H1, H2, etc...)"
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                                <field name="googleFontName" class="" type="text" default="Open+Sans"
+                                        label="Google Font Name"
+                                        description="Example: Open+Sans or Source+Sans+Pro" />
+
+                                <field name="fluidContainer"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="0"
+                                        label="Fluid Layout"
+                                        description="Use Bootstrap's Fluid ir Static container (Both are responsive)"
+                                >
+                                        <option value="1">Fluid</option>
+                                        <option value="0">Static</option>
+                                </field>
+                        </fieldset>
+                </fields>
+        </config>
+</extension>
