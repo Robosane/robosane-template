@@ -1089,7 +1089,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #C00;
   text-decoration: none;
 }
 a:hover,
@@ -3856,6 +3856,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav {
   padding-left: 0;
+  padding-top: 6px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -3871,7 +3872,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  /*background-color: #eee;*/
+  border-bottom: 4px solid #f00;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -3968,19 +3970,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .nav-pills > li {
-  float: left;
+  float: right;
 }
 .nav-pills > li > a {
-  border-radius: 4px;
+  border-radius: 0px; 
 }
 .nav-pills > li + li {
-  margin-left: 2px;
+  margin-right: 2px;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #fff;
-  background-color: #337ab7;
+  color: #000;
+  background-color: #f00;
 }
 .nav-stacked > li {
   float: none;
@@ -4825,7 +4827,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #F00;
   background-color: #fff;
 }
 .list-group-item > .badge {
