@@ -21,6 +21,10 @@ h6 {
     font-weight: 700;
 }
 
+.navbar-header {
+  background-color: #f00;
+}
+
 .topnav {
     font-size: 14px;
     background-color: #000;
