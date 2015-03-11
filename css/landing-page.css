@@ -45,23 +45,6 @@ h6 {
     font-weight: 400;
 }
 
-.intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(../img/cmc2.png) no-repeat center center;
-    background-size: cover;
-
-    /*
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    */
-}
-
 .intro-message {
     position: relative;
     padding-top: 20%;
@@ -85,11 +68,15 @@ h6 {
 }
 
 .items-more {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 6%;
+  padding-bottom: 6%;
   text-align: center;
   text-transform: bold;
   font-size: 20px;
+}
+
+.items-more > a {
+  
 }
 
 @media(max-width:767px) {
@@ -142,13 +129,6 @@ h6 {
     float: left;
     width: 200px;
     border-top: 3px solid #e7e7e7;
-}
-
-.banner {
-    padding: 100px 0;
-    color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
-    background-size: cover;
 }
 
 .banner h2 {
