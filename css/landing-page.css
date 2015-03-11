@@ -68,11 +68,15 @@ h6 {
 }
 
 .items-more {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 6%;
+  padding-bottom: 6%;
   text-align: center;
   text-transform: bold;
   font-size: 20px;
+}
+
+.items-more > a {
+  
 }
 
 @media(max-width:767px) {
