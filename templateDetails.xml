@@ -37,10 +37,13 @@
                                         label="Header Image"
                                         description="Picture to use as the header background, if there is a module in the header position." />
 
-                                <field name="footer-image" type="media" default=""
+                                <field name="footerImage" type="media" default=""
                                         label="Footer Image"
                                         description="The Image to use as the footer for the page, if there are modules in the 'footer-image' position." />
-                                        
+
+                                <field name="sitename" type="text" default=""
+                                        label="Site Display Name"
+                                        description="The text to display in the navbar next to the Site Logo." />
 
                                 <!-- <field name="templateColor" class="" type="color" default="#08C"
                                         label="Template Color"
