@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+        <name>Robosan3</name>
+        <version>0.5.3</version>
+        <creationDate>March 2015</creationDate>
+        <author>Ben Klein</author>
+        <authorEmail>robobenklein@robosane.net</authorEmail>
+        <copyright>Copyright (C) Ben Klein, 2015.</copyright>
+        <description>A flat, modern, and sleek look with a custom version of Bootstrap.</description>
+        <files>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>css</folder>
+                <folder>img</folder>
+                <folder>js</folder>
+                <folder>fonts</folder>
+                <folder>font-awsome</folder>
+        </files>
+        <positions>
+                <position>header</position>
+                <position>navigation</position>
+                <position>footer-img</position>
+                <position>footer</position>
+                <position>right-column</position>
+                <position>above-content</position>
+                <position>below-content</position>
+        </positions>
+        <config>
+                <fields name="params">
+                        <fieldset name="advanced">
+                                <field name="siteLogo" type="media" default=""
+                                        label="Site Logo"
+                                        description="Logo to be used at the left of the navbar. Width is always 60px. Best fit: 1w:1.3h ratio." />
+
+                                <field name="headerBackground" type="media" default=""
+                                        label="Header Image"
+                                        description="Picture to use as the header background, if there is a module in the header position." />
+
+                                <field name="footer-image" type="media" default=""
+                                        label="Footer Image"
+                                        description="The Image to use as the footer for the page, if there are modules in the 'footer-image' position." />
+                                        
+
+                                <!-- <field name="templateColor" class="" type="color" default="#08C"
+                                        label="Template Color"
+                                        description="Choose an overall color for the site template. If left blank the Default (#0088CC) is used." />
+
+                                <field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+                                        label="Background Color"
+                                        description="Color displayed when there is no background image. Default (#F4F6F7)" />
+
+                                <field name="templateBackgroundImage" class="" type="media" default=""
+                                        label="Background Image"
+                                        description="Image to use as background for the template." />
+
+                                <field name="logoFile" class="" type="media" default=""
+                                        label="Logo"
+                                        description="Upload a custom logo for the site template." />
+
+                                <field name="sitetitle"  type="text" default=""
+                                        label="Title"
+                                        description="Alternative Page Title"
+                                        filter="string" />
+
+                                <field name="sitedescription"  type="text" default=""
+                                        label="Description"
+                                        description="Optional Text to Show as Subheading"
+                                        filter="string" />
+
+                                <field name="googleFont"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="Google Font for Headings"
+                                        description="Load a Google Font for Headings (H1, H2, etc...)"
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                                <field name="googleFontName" class="" type="text" default="Open+Sans"
+                                        label="Google Font Name"
+                                        description="Example: Open+Sans or Source+Sans+Pro" />
+
+                                <field name="fluidContainer"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="0"
+                                        label="Fluid Layout"
+                                        description="Use Bootstrap's Fluid ir Static container (Both are responsive)"
+                                >
+                                        <option value="1">Fluid</option>
+                                        <option value="0">Static</option>
+
+                                      -->
+                                </field>
+                        </fieldset>
+                </fields>
+        </config>
+</extension>
