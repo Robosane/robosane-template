@@ -177,6 +177,7 @@ ul.unstyled, ol.unstyled {
   margin-left: 0px;
   list-style: none;
   text-align: -webkit-match-parent;
+  padding-left: 0px;
 }
 
 .well {
