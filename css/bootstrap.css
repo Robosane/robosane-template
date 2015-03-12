@@ -1389,7 +1389,7 @@ a.bg-danger:hover {
 }
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 10px 0 10px;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -3870,7 +3870,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
-  padding-bottom: 4px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
