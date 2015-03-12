@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.1" type="template" client="site">
+<extension version="3.3.1" type="template" client="site">
         <name>Robosan3</name>
-        <version>0.5.3</version>
+        <version>0.5.4</version>
         <creationDate>March 2015</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@robosane.net</authorEmail>
@@ -42,61 +42,8 @@
 
                                 <field name="sitename" type="text" default=""
                                         label="Site Display Name"
-                                        description="The text to display in the navbar next to the Site Logo." />
-
-                                <!-- <field name="templateColor" class="" type="color" default="#08C"
-                                        label="Template Color"
-                                        description="Choose an overall color for the site template. If left blank the Default (#0088CC) is used." />
-
-                                <field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
-                                        label="Background Color"
-                                        description="Color displayed when there is no background image. Default (#F4F6F7)" />
-
-                                <field name="templateBackgroundImage" class="" type="media" default=""
-                                        label="Background Image"
-                                        description="Image to use as background for the template." />
-
-                                <field name="logoFile" class="" type="media" default=""
-                                        label="Logo"
-                                        description="Upload a custom logo for the site template." />
-
-                                <field name="sitetitle"  type="text" default=""
-                                        label="Title"
-                                        description="Alternative Page Title"
+                                        description="The text to display in the navbar next to the Site Logo."
                                         filter="string" />
-
-                                <field name="sitedescription"  type="text" default=""
-                                        label="Description"
-                                        description="Optional Text to Show as Subheading"
-                                        filter="string" />
-
-                                <field name="googleFont"
-                                        type="radio"
-                                        class="btn-group btn-group-yesno"
-                                        default="1"
-                                        label="Google Font for Headings"
-                                        description="Load a Google Font for Headings (H1, H2, etc...)"
-                                >
-                                        <option value="1">JYES</option>
-                                        <option value="0">JNO</option>
-                                </field>
-
-                                <field name="googleFontName" class="" type="text" default="Open+Sans"
-                                        label="Google Font Name"
-                                        description="Example: Open+Sans or Source+Sans+Pro" />
-
-                                <field name="fluidContainer"
-                                        type="radio"
-                                        class="btn-group btn-group-yesno"
-                                        default="0"
-                                        label="Fluid Layout"
-                                        description="Use Bootstrap's Fluid ir Static container (Both are responsive)"
-                                >
-                                        <option value="1">Fluid</option>
-                                        <option value="0">Static</option>
-
-                                      -->
-                                </field>
                         </fieldset>
                 </fields>
         </config>
