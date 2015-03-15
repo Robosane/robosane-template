@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.3.1" type="template" client="site">
-        <name>Robosan3</name>
-        <version>0.5.4</version>
+        <name>Robos4ne</name>
+        <version>1.0.0</version>
         <creationDate>March 2015</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@robosane.net</authorEmail>
@@ -10,20 +10,22 @@
         <description>A flat, modern, and sleek look with a custom version of Bootstrap.</description>
         <files>
                 <filename>index.php</filename>
+                <filename>component.php</filename>
                 <filename>templateDetails.xml</filename>
                 <folder>css</folder>
                 <folder>img</folder>
                 <folder>js</folder>
+                <folder>html</folder>
                 <folder>fonts</folder>
         </files>
         <positions>
-                <position>header</position>
-                <position>navigation</position>
+                <position>position-0</position><!-- Header Backgrounded -->
+                <position>position-1</position><!-- Navigation -->
                 <position>footer-img</position>
-                <position>footer</position>
-                <position>right-column</position>
-                <position>above-content</position>
-                <position>below-content</position>
+                <position>footer</position><!-- Footer -->
+                <position>position-7</position><!-- Right sidebar -->
+                <position>position-3</position><!-- Above content -->
+                <position>position-2</position><!-- Below Content -->
         </positions>
         <config>
                 <fields name="params">

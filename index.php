@@ -24,12 +24,6 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' .$this->template. '/js/jquery.js');
-$doc->addScript('templates/' .$this->template. '/js/template.js');
-$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
-
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/landing-page.css');
@@ -37,15 +31,24 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/landing-page.css');
 // Add current user information
 $user = JFactory::getUser();
 
+// Add JavaScript Frameworks
+JHtml::_('jquery.framework');
+JHtml::_('bootstrap.framework');
+//$doc->addScript('templates/' .$this->template. '/js/jquery.js');
+$doc->addScript('templates/' .$this->template. '/js/template.js');
+$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+
+if ($this->countModules('position-7')) {
+  $span = "col-md-9";
+} elseif (!$this->countModules('position-7')) {
+  $span = "col-md-12";
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <jdoc:include type="head" />
 
     <!-- Custom Fonts -->
@@ -57,13 +60,13 @@ $user = JFactory::getUser();
         padding-bottom: 50px;
         text-align: center;
         color: #f8f8f8;
-        background: url(<?php echo $this->params->get('headerBackground');?>) no-repeat center center; /* Get from setting `headerBackground` */
+        background: url(/<?php echo $this->params->get('headerBackground');?>) no-repeat center center; /* Get from setting `headerBackground` */
         background-size: cover;
     }
     .banner {
         padding: 100px 0;
         color: #f8f8f8;
-        background: url(<?php echo $this->params->get('footerImage');?>) no-repeat center center; /* Get from setting `footerImage` */
+        background: url(/<?php echo $this->params->get('footerImage');?>) no-repeat center center; /* Get from setting `footerImage` */
         background-size: cover;
     }
     </style>
@@ -86,58 +89,53 @@ $user = JFactory::getUser();
                 <a href="<?php echo $this->baseurl; ?>">
 <!-- Generated Site logo -->
                   <img src="<?php echo $this->params->get('siteLogo');?>" width="60px" height="auto"></img>
-<!-- Maybe the href="/" should not be hard coded... -->
                 </a>
                 </div>
                 <a class="topnav navbar-brand" style="padding-left: 80px; text-transform: lowercase;" href="<?php echo $this->baseurl; ?>">
-<!-- Generated (Site Title) -->
-<?php echo $this->params->get('sitename');?>
-<!-- Twas only a string, nothing much -->
+                  <?php echo $this->params->get('sitename');?>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <!-- Generated (Menu/Navigation position: "navigation") -->
-<div class="subnav"><ul class="nav nav-pills menu"><li class="item-103 current active"><a href="/">News</a></li><li class="item-102 deeper dropdown parent"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us <b class="caret"></b></a><ul class="dropdown-menu"><li class="item-225"><a href="/about-us/history">History</a></li><li class="item-226"><a href="/about-us/technology">Technology</a></li><li class="item-228"><a href="/about-us/about-us-sponsors">Sponsors</a></li><li class="item-323"><a href="/about-us/about-us-our-team">Our Team</a></li></ul></li><li class="item-145"><a href="/screens">Media</a></li><li class="item-143"><a href="/servers">Servers</a></li><li class="item-181"><a href="/kunena-2013-11-02">Forums</a></li></ul></div>
+<jdoc:include type="modules" name="position-1" style="none" />
 <!-- Not Generated -->
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
 
     <!-- Header -->
-<?php if ($this->countModules('header')) : ?>
-    <div class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
+<?php if ($this->countModules('position-0')) : ?>
+  <div class="intro-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="intro-message">
 <!-- This should be a module position: `header` -->
-                        <jdoc:include type="module" name="header" />
+            <jdoc:include type="modules" name="position-0" style="none" />
 <!-- No longer under the demonizing control of Joomla -->
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 <?php endif; ?>
 
 <div class="content-section-a">
   <div class="container">
-    <div class="col-md-9">
+    <div class="<?php echo $span;?>">
 <!-- Begin Joomla primary Article/News whatever kind of content. -->
-      <jdoc:include type="modules" name="above-content" style="xhtml" />
+      <jdoc:include type="modules" name="position-3" style="xhtml" />
       <jdoc:include type="message" />
       <jdoc:include type="component" />
-      <jdoc:include type="modules" name="below-content" style="none" />
+      <jdoc:include type="modules" name="position-2" style="none" />
 <!-- Not generated -->
     </div>
-<?php if ($this->countModules('right-column')) : ?>
+<?php if ($this->countModules('position-7')) : ?>
     <div class="col-md-3" style="left: 0px;">
 <!-- Right column module position -->
-      <jdoc:include type="modules" name="right-column" style="well" />
+      <jdoc:include type="modules" name="position-7" style="well" />
 <!-- Close right column -->
     </div>
 <?php endif; ?>
@@ -150,7 +148,7 @@ $user = JFactory::getUser();
     <div class="container">
       <div class="row">
 <!-- Stuff Generated by Joomla for position `footer-image` -->
-      <jdoc::include type="modules" name="footer-image" style="none" />
+        <jdoc:include type="modules" name="footer-image" style="none" />
 <!-- Again free from Joomla's oppressive grasp. -->
       </div>
     </div>
@@ -158,12 +156,12 @@ $user = JFactory::getUser();
 <?php endif; ?>
 
 <!-- Footer -->
-    <footer>
-        <div class="container">
+  <footer>
+      <div class="container">
 <!-- And yet again trapped in position `footer` -->
-            <jdoc:include type="modules" name="footer" style="none" />
+        <jdoc:include type="modules" name="footer" style="none" />
 <!-- Free, at last -->
-        </div>
-    </footer>
+      </div>
+  </footer>
 </body>
 </html>
