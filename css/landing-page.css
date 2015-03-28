@@ -27,14 +27,9 @@ p > img {
   height: auto;
 }
 
-/*
-.blog {
-  padding: 50px 0;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-} */
+.cbMenu > li {
+  background-color: #fff;
+}
 
 .navbar-header {
   /*background-color: #f00;*/
