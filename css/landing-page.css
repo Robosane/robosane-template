@@ -27,7 +27,7 @@ p > img {
   height: auto;
 }
 
-.cbMenu > li {
+.cbMenu > li > a {
   background-color: #fff;
 }
 
