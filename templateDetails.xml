@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.3.1" type="template" client="site">
-        <name>Robos4ne</name>
-        <version>1.0.0</version>
+<extension version="3.4.22" type="template" client="site">
+        <name>Robosane</name>
+        <version>2.11.4</version>
         <creationDate>March 2015</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@robosane.net</authorEmail>
@@ -17,6 +17,7 @@
                 <folder>js</folder>
                 <folder>html</folder>
                 <folder>fonts</folder>
+                <folder>less</folder>
         </files>
         <positions>
                 <position>position-0</position><!-- Header Backgrounded -->

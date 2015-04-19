@@ -1,6 +1,6 @@
 <?php
 /**
- * Robosan3 template for robosane.net
+ * Robosane template for robosane.net
  *
  * @copyright   Copyright (C) Ben Klein
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
@@ -36,7 +36,7 @@ JHtml::_('jquery.framework');
 JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
-$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+//$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
 
 if ($this->countModules('position-7')) {
   $span = "col-md-9";
