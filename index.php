@@ -33,10 +33,10 @@ $user = JFactory::getUser();
 
 // Add JavaScript Frameworks
 JHtml::_('jquery.framework');
-JHtml::_('bootstrap.framework');
+//JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
-//$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
 
 if ($this->countModules('position-7')) {
   $span = "col-md-9";
