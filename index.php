@@ -108,7 +108,7 @@ if ($this->countModules('position-7')) {
 
     <!-- Header -->
 <?php if ($this->countModules('position-0')) : ?>
-  <div class="intro-header">
+  <div class="intro-header" id="intro-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
