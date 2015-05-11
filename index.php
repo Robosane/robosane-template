@@ -36,7 +36,7 @@ JHtml::_('jquery.framework');
 //JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
-$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+//$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
 
 if ($this->countModules('position-7')) {
   $span = "col-md-9";
@@ -53,7 +53,7 @@ if ($this->countModules('position-7')) {
     <jdoc:include type="head" />
 
     <!-- Custom Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <style>
     .intro-header {
@@ -71,7 +71,6 @@ if ($this->countModules('position-7')) {
         background-size: cover;
     }
     </style>
-
 </head>
 
 <body>
@@ -88,7 +87,7 @@ if ($this->countModules('position-7')) {
                 </button>
                 <div style="display:block; position: fixed;">
                 <a href="<?php echo $this->baseurl; ?>">
-<!-- Generated Site logo -->
+                  <!-- Generated Site logo -->
                   <img src="<?php echo $this->params->get('siteLogo');?>" width="60px" height="auto"></img>
                 </a>
                 </div>
@@ -98,15 +97,14 @@ if ($this->countModules('position-7')) {
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<!-- Generated (Menu/Navigation position: "navigation") -->
-<jdoc:include type="modules" name="position-1" style="none" />
-<!-- Not Generated -->
+              <!-- Generated (Menu/Navigation position: "navigation") -->
+              <jdoc:include type="modules" name="position-1" style="none" />
+              <!-- Not Generated -->
             </div>
         </div>
     </nav>
 
-
-    <!-- Header -->
+<!-- Image Header -->
 <?php if ($this->countModules('position-0')) : ?>
   <div class="intro-header" id="intro-header">
     <div class="container">
