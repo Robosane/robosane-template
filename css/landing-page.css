@@ -275,3 +275,67 @@ ul.unstyled, ol.unstyled {
         -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
         box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
+
+/* Bootstrap Overrides */
+/* Cuz bootstrap need a change. */
+
+a {
+  color: #C00;
+}
+
+.page-header {
+  margin: 10px 0 10px;
+}
+
+.dropdown-header {
+  background-color: #f00;
+  border-radius: 0px;
+}
+
+.dropdown-menu > li > a {
+  color: #ddd;
+  background-color: #222;
+  padding: 3px 20px;
+  font-weight: bold;
+}
+
+.dropdown-menu > li > a:focus {
+  color: #f00;
+  background-color: #222;
+}
+
+.nav {
+  padding-top: 6px;
+}
+
+.nav > li > a:focus {
+  border-bottom: 4px solid #f00;
+}
+
+.nav .open > a:focus {
+  background-color: #222;
+  border-color: #00f;
+}
+
+.nav-pills > li {
+  float: right;
+}
+
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+.nav-pills > li + li {
+  margin-right: 2px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #000;
+  background-color: #f00;
+}
+
+.nav-pills > .active > a > .badge {
+  color: #f00;
+}
