@@ -21,14 +21,15 @@ h6 {
     font-weight: 700;
 }
 
-/*
-.blog {
-  padding: 50px 0;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-} */
+p > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cbMenu > li > a {
+  background-color: #fff;
+}
 
 .navbar-header {
   /*background-color: #f00;*/
@@ -112,6 +113,7 @@ h6 {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+    padding-top: 100px;
 }
 
 .section-heading {
@@ -146,7 +148,7 @@ h6 {
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .banner h2 {
         margin: 0;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
@@ -169,14 +171,95 @@ footer {
     background-color: #f8f8f8;
 }
 
+/*
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    display: inline;
+  }
+  .form-horizontal .controls {
+    display: inline;
+  }
+} */
+
 p.copyright {
     margin: 15px 0 0;
+}
+
+.pagination {
+  list-style: none;
+  display: inline;
+}
+
+.pagination ul {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-left: 0;
+        margin-bottom: 0;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.pagination ul > li {
+        display: inline;
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+        float: left;
+        padding: 4px 12px;
+        line-height: 18px;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-left-width: 0;
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+        background-color: #f5f5f5;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+        color: #999;
+        cursor: default;
+}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+        color: #999;
+        background-color: transparent;
+        cursor: default;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+        border-left-width: 1px;
+        -webkit-border-top-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        border-top-left-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        border-bottom-left-radius: 4px;
+}
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+        -webkit-border-top-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+        border-bottom-right-radius: 4px;
 }
 
 ul.unstyled, ol.unstyled {
   margin-left: 0px;
   list-style: none;
   text-align: -webkit-match-parent;
+  padding-left: 0px;
 }
 
 .well {
@@ -191,4 +274,68 @@ ul.unstyled, ol.unstyled {
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
         -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
         box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+/* Bootstrap Overrides */
+/* Cuz bootstrap need a change. */
+
+a {
+  color: #C00;
+}
+
+.page-header {
+  margin: 10px 0 10px;
+}
+
+.dropdown-header {
+  background-color: #f00;
+  border-radius: 0px;
+}
+
+.dropdown-menu > li > a {
+  color: #ddd;
+  background-color: #222;
+  padding: 3px 20px;
+  font-weight: bold;
+}
+
+.dropdown-menu > li > a:focus {
+  color: #f00;
+  background-color: #222;
+}
+
+.nav {
+  padding-top: 6px;
+}
+
+.nav > li > a:focus {
+  border-bottom: 4px solid #f00;
+}
+
+.nav .open > a:focus {
+  background-color: #222;
+  border-color: #00f;
+}
+
+.nav-pills > li {
+  float: right;
+}
+
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+.nav-pills > li + li {
+  margin-right: 2px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #000;
+  background-color: #f00;
+}
+
+.nav-pills > .active > a > .badge {
+  color: #f00;
 }

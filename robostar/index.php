@@ -14,8 +14,6 @@ $params = JFactory::getApplication()->getTemplate(true)->params;
 
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
-$this->language = $doc->language;
-$this->direction = $doc->direction;
 
 // Detecting Active Variables
 $option   = $app->input->getCmd('option', '');
@@ -24,15 +22,6 @@ $layout   = $app->input->getCmd('layout', '');
 $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
-
-if($task == "edit" || $layout == "form" )
-{
-        $fullWidth = 1;
-}
-else
-{
-        $fullWidth = 0;
-}
 
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
