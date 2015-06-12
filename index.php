@@ -26,7 +26,7 @@ $sitename = $app->getCfg('sitename');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/landing-page.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/robosane.css');
 
 // Add current user information
 $user = JFactory::getUser();
