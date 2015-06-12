@@ -1,7 +1,5 @@
 /*!
- * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Robosane Joomla Template Theem CSS.
  */
 
 body,
@@ -171,7 +169,6 @@ footer {
     background-color: #f8f8f8;
 }
 
-/*
 @media (min-width: 768px) {
   .form-horizontal .control-label {
     display: inline;
@@ -179,7 +176,7 @@ footer {
   .form-horizontal .controls {
     display: inline;
   }
-} */
+}
 
 p.copyright {
     margin: 15px 0 0;
@@ -278,6 +275,7 @@ ul.unstyled, ol.unstyled {
 
 /* Bootstrap Overrides */
 /* Cuz bootstrap need a change. */
+/* At least for my purposes. */
 
 a {
   color: #C00;

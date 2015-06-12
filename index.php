@@ -26,17 +26,17 @@ $sitename = $app->getCfg('sitename');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/landing-page.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/robosane.css');
 
 // Add current user information
 $user = JFactory::getUser();
 
 // Add JavaScript Frameworks
 JHtml::_('jquery.framework');
-//JHtml::_('bootstrap.framework');
+JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
-$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+//$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
 
 if ($this->countModules('position-7')) {
   $span = "col-md-9";
