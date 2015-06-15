@@ -1,10 +1,9 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.robostar
+ * @subpackage  Templates.robosane
  *
- * @copyright   Copyright (C) Ben Klein
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * @copyright   Copyright (C) Ben Klein, Robosane
  */
 
 defined('_JEXEC') or die;

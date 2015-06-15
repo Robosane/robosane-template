@@ -1,7 +1,5 @@
 /*!
- * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Robosane Joomla Template Theem CSS.
  */
 
 body,
@@ -171,7 +169,6 @@ footer {
     background-color: #f8f8f8;
 }
 
-/*
 @media (min-width: 768px) {
   .form-horizontal .control-label {
     display: inline;
@@ -179,7 +176,7 @@ footer {
   .form-horizontal .controls {
     display: inline;
   }
-} */
+}
 
 p.copyright {
     margin: 15px 0 0;
@@ -274,4 +271,69 @@ ul.unstyled, ol.unstyled {
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
         -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
         box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+/* Bootstrap Overrides */
+/* Cuz bootstrap need a change. */
+/* At least for my purposes. */
+
+a {
+  color: #C00;
+}
+
+.page-header {
+  margin: 10px 0 10px;
+}
+
+.dropdown-header {
+  background-color: #f00;
+  border-radius: 0px;
+}
+
+.dropdown-menu > li > a {
+  color: #ddd;
+  background-color: #222;
+  padding: 3px 20px;
+  font-weight: bold;
+}
+
+.dropdown-menu > li > a:focus {
+  color: #f00;
+  background-color: #222;
+}
+
+.nav {
+  padding-top: 6px;
+}
+
+.nav > li > a:focus {
+  border-bottom: 4px solid #f00;
+}
+
+.nav .open > a:focus {
+  background-color: #222;
+  border-color: #00f;
+}
+
+.nav-pills > li {
+  float: right;
+}
+
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+.nav-pills > li + li {
+  margin-right: 2px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #000;
+  background-color: #f00;
+}
+
+.nav-pills > .active > a > .badge {
+  color: #f00;
 }

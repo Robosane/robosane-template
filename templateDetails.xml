@@ -2,12 +2,12 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.4.22" type="template" client="site">
         <name>Robosane</name>
-        <version>2.11.4</version>
+        <version>2.12.1</version>
         <creationDate>March 2015</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@robosane.net</authorEmail>
         <copyright>Copyright (C) Ben Klein, 2015.</copyright>
-        <description>A flat, modern, and sleek look with a custom version of Bootstrap.</description>
+        <description>A flat, modern, and sleek look based from Bootstrap designs.</description>
         <files>
                 <filename>index.php</filename>
                 <filename>component.php</filename>
@@ -22,7 +22,7 @@
         <positions>
                 <position>position-0</position><!-- Header Backgrounded -->
                 <position>position-1</position><!-- Navigation -->
-                <position>footer-img</position>
+                <position>footer-img</position><!-- Footer Image -->
                 <position>footer</position><!-- Footer -->
                 <position>position-7</position><!-- Right sidebar -->
                 <position>position-3</position><!-- Above content -->

@@ -1,9 +1,9 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.robostar
+ * @subpackage  Templates.robosane
  *
- * @copyright   Copyright (C) Ben Klein
+ * @copyright   Copyright (C) Ben Klein, Robosane
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  */
 
