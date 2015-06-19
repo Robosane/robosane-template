@@ -358,3 +358,18 @@ a {
 .nav-pills > .active > a > .badge {
   color: #f00;
 }
+
+/* udde module styling */
+#uddeim-modulenew,
+#uddeim-module {
+  font-size: 11px;
+}
+
+#uddeim-module p.uddeim-module-head,
+#uddeim-modulenew p.uddeim-module-head,
+#uddeim-module p.uddeim-module-body,
+#uddeim-modulenew p.uddeim-module-body,
+#uddeim-module p.uddeim-module-row,
+#uddeim-modulenew p.uddeim-module-row {
+  margin: 0;
+}
