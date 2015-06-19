@@ -316,8 +316,9 @@ a {
   padding-top: 6px;
 }
 
-.nav .open > a:focus,
-.nav .open > a:hover {
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
   background-color: #222;
   border-color: #00f;
 }

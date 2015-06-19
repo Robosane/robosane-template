@@ -56,7 +56,7 @@ if ($this->countModules('position-7')) {
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <style>
-    .intro-header {
+    #intro-header {
         padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
         padding-bottom: 50px;
         text-align: center;
