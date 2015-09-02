@@ -47,6 +47,26 @@
                                         label="Site Display Name"
                                         description="The text to display in the navbar next to the Site Logo."
                                         filter="string" />
+
+                                <field name="twittercards" type="radio" default="0"
+                                        label="Enable Twitter Cards"
+                                        description="Choose to enable the addition of the twitter cards meta tags on each page."
+                                        class="btn-group btn-group-yesno"
+                                        >
+                                        <option value="1">JYES</option>
+					                              <option value="0">JNO</option>
+                                </field>
+
+                                <field name="twitter_sitename" type="text" default="@robosane"
+                                        label="Twitter site name"
+                                        description="The @username to associate this card with for analytics. (include the @)"
+                                        filter="string" />
+
+                                <field name="twitter_default-title" type="text" default="Robosane"
+                                        label="Default Twitter Title"
+                                        description="The Title of the article to show when the real one can't be loaded."
+                                        filter="string" />
+
                         </fieldset>
                 </fields>
         </config>

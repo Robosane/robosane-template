@@ -51,10 +51,29 @@ if ($this->countModules('position-7')) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <jdoc:include type="head" />
+    <?php
+    if ( $this->params->get('twittercards') == "1" ) {
+      echo '<meta name="twitter:card" content="summary" />';
+      echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
+      try {
+        $input = JFactory::getApplication()->input;
+        $id = $input->getInt('id'); //get the article ID
+        $article = JTable::getInstance('content');
+        $article->load($id);
+
+        echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
+        echo '<meta name="twitter:description" content="' . $article->get('introtext') . '" />'; // also 'fulltext' might work
+      } catch (Exception $e) {
+        echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
+        echo '<meta name="twitter:description" content="" />';
+      }
+    } // end twitter cards
+    ?>
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- CSS for changing header background -->
     <style>
     #intro-header {
         padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
