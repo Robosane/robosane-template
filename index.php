@@ -62,10 +62,10 @@ if ($this->countModules('position-7')) {
         $article->load($id);
 
         echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
-        echo '<meta name="twitter:description" content="' . $article->get('introtext') . '" />'; // also 'fulltext' might work
+        echo '<meta name="twitter:description" content="' . str_replace(array('\'', '"'), '', strip_tags($article->get('introtext'))) . '" />'; // also 'fulltext' might work
       } catch (Exception $e) {
         echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
-        echo '<meta name="twitter:description" content="" />';
+        echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
       }
     } // end twitter cards
     ?>
