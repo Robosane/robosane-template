@@ -112,6 +112,8 @@ p > img {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 100px;
+    /* Fix long URLs from breaking out of their containers. */
+    word-wrap: break-word;
 }
 
 .section-heading {

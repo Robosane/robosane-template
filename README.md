@@ -7,5 +7,6 @@ Features:
  * Mobile native experience
  * Desktop all resolution support
  * Bootstrap based, modern coding standards.
+ * Best experienced in Chrome, all platforms
 
-Yarr
+Before using this, be sure to TEST IT and ask me. I have only ever tested this template on https://robosane.net/
