@@ -18,7 +18,7 @@
                 <folder>html</folder>
                 <folder>fonts</folder>
                 <folder>less</folder>
-		<folder>lagnuage</folder>
+		            <folder>language</folder>
         </files>
         <positions>
                 <position>position-0</position><!-- Header Backgrounded -->
