@@ -16,6 +16,9 @@ $doc = JFactory::getDocument();
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 
+$menu = $app->getMenu();
+$lang = JFactory::getLanguage();
+
 // Detecting Active Variables
 $option   = $app->input->getCmd('option', '');
 $view     = $app->input->getCmd('view', '');
@@ -51,21 +54,31 @@ if ($this->countModules('position-7')) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <jdoc:include type="head" />
-    <?php
+    <?php // Twitter cards!
     if ( $this->params->get('twittercards') == "1" ) {
-      echo '<meta name="twitter:card" content="summary" />';
-      echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
-      try {
-        $input = JFactory::getApplication()->input;
-        $id = $input->getInt('id'); //get the article ID
-        $article = JTable::getInstance('content');
-        $article->load($id);
-
-        echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
-        echo '<meta name="twitter:description" content="' . str_replace(array('\'', '"'), '', strip_tags($article->get('introtext'))) . '" />'; // also 'fulltext' might work
-      } catch (Exception $e) {
+      if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+	      //echo 'This is the front page';
+        echo '<meta name="twitter:card" content="summary" />';
+        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
         echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
         echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
+      }
+      else {
+        //echo 'This is not the front page';
+      	echo '<meta name="twitter:card" content="summary" />';
+        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
+        try {
+          $input = JFactory::getApplication()->input;
+          $id = $input->getInt('id'); //get the article ID
+          $article = JTable::getInstance('content');
+          $article->load($id);
+
+          echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
+          echo '<meta name="twitter:description" content="' . str_replace(array('\'', '"'), '', strip_tags($article->get('introtext'))) . '" />'; // also 'fulltext' might work
+        } catch (Exception $e) {
+          echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
+          echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
+        }
       }
     } // end twitter cards
     ?>
