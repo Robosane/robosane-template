@@ -1,5 +1,5 @@
 /*!
- * Robosane Joomla Template Theem CSS.
+ * Robosane Joomla Template Theeem CSS.
  */
 
 body,
@@ -23,6 +23,10 @@ p > img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.btn {
+  white-space: normal;
 }
 
 .cbMenu > li > a {
@@ -112,6 +116,8 @@ p > img {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 100px;
+    /* Fix long URLs from breaking out of their containers. */
+    word-wrap: break-word;
 }
 
 .section-heading {
@@ -290,6 +296,14 @@ a {
   border-radius: 0px;
 }
 
+.dropdown-menu {
+  float: none;
+  text-align: left;
+  list-style: none;
+  background-color: #f00;
+  border-radius: 0px;
+}
+
 .dropdown-menu > li > a {
   color: #ddd;
   background-color: #222;
@@ -297,8 +311,10 @@ a {
   font-weight: bold;
 }
 
+.dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #f00;
+  text-decoration: none;
   background-color: #222;
 }
 
@@ -306,13 +322,24 @@ a {
   padding-top: 6px;
 }
 
-.nav > li > a:focus {
-  border-bottom: 4px solid #f00;
-}
-
+.nav .open > a,
+.nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #222;
   border-color: #00f;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 4px solid #f00;
+}
+
+.nav-stacked > li > a:hover,
+.nav-stacked > li > a:focus {
+  border-bottom: 1px solid transparent;
+  border-left: 4px solid #f00;
 }
 
 .nav-pills > li {
@@ -336,4 +363,19 @@ a {
 
 .nav-pills > .active > a > .badge {
   color: #f00;
+}
+
+/* udde module styling */
+#uddeim-modulenew,
+#uddeim-module {
+  font-size: 11px;
+}
+
+#uddeim-module p.uddeim-module-head,
+#uddeim-modulenew p.uddeim-module-head,
+#uddeim-module p.uddeim-module-body,
+#uddeim-modulenew p.uddeim-module-body,
+#uddeim-module p.uddeim-module-row,
+#uddeim-modulenew p.uddeim-module-row {
+  margin: 0;
 }

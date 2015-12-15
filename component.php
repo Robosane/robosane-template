@@ -1,10 +1,9 @@
 <?php
 /**
- * RoboStar Template by Ben Klein
- * Template based from Protostar
+ * Robosane Template by Ben Klein
  *
  * @copyright   Copyright (C) Ben Klein
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * @license     GNU General Public License version 3 or later
  */
 
 defined('_JEXEC') or die;

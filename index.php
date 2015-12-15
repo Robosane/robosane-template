@@ -16,6 +16,9 @@ $doc = JFactory::getDocument();
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 
+$menu = $app->getMenu();
+$lang = JFactory::getLanguage();
+
 // Detecting Active Variables
 $option   = $app->input->getCmd('option', '');
 $view     = $app->input->getCmd('view', '');
@@ -33,10 +36,10 @@ $user = JFactory::getUser();
 
 // Add JavaScript Frameworks
 JHtml::_('jquery.framework');
-JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
-$doc->addScript('templates/' .$this->template. '/js/template.js');
+JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
+$doc->addScript('templates/' .$this->template. '/js/template.js');
 
 if ($this->countModules('position-7')) {
   $span = "col-md-9";
@@ -51,12 +54,41 @@ if ($this->countModules('position-7')) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <jdoc:include type="head" />
+    <?php // Twitter cards!
+    if ( $this->params->get('twittercards') == "1" ) {
+      if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+	      //echo 'This is the front page';
+        echo '<meta name="twitter:card" content="summary" />';
+        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
+        echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
+        echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
+      }
+      else {
+        //echo 'This is not the front page';
+      	echo '<meta name="twitter:card" content="summary" />';
+        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
+        try {
+          $input = JFactory::getApplication()->input;
+          $id = $input->getInt('id'); //get the article ID
+          $article = JTable::getInstance('content');
+          $article->load($id);
+
+          echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
+          echo '<meta name="twitter:description" content="' . str_replace(array('\'', '"'), '', strip_tags($article->get('introtext'))) . '" />'; // also 'fulltext' might work
+        } catch (Exception $e) {
+          echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
+          echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
+        }
+      }
+    } // end twitter cards
+    ?>
 
     <!-- Custom Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- CSS for changing header background -->
     <style>
-    .intro-header {
+    #intro-header {
         padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
         padding-bottom: 50px;
         text-align: center;
@@ -71,7 +103,6 @@ if ($this->countModules('position-7')) {
         background-size: cover;
     }
     </style>
-
 </head>
 
 <body>
@@ -88,7 +119,7 @@ if ($this->countModules('position-7')) {
                 </button>
                 <div style="display:block; position: fixed;">
                 <a href="<?php echo $this->baseurl; ?>">
-<!-- Generated Site logo -->
+                  <!-- Generated Site logo -->
                   <img src="<?php echo $this->params->get('siteLogo');?>" width="60px" height="auto"></img>
                 </a>
                 </div>
@@ -98,15 +129,14 @@ if ($this->countModules('position-7')) {
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<!-- Generated (Menu/Navigation position: "navigation") -->
-<jdoc:include type="modules" name="position-1" style="none" />
-<!-- Not Generated -->
+              <!-- Generated (Menu/Navigation position: "navigation") -->
+              <jdoc:include type="modules" name="position-1" style="none" />
+              <!-- Not Generated -->
             </div>
         </div>
     </nav>
 
-
-    <!-- Header -->
+<!-- Image Header -->
 <?php if ($this->countModules('position-0')) : ?>
   <div class="intro-header" id="intro-header">
     <div class="container">
