@@ -43,6 +43,10 @@ p > img {
     text-transform: uppercase;
 }
 
+.topnav > .navbar {
+  margin-bottom: 0;
+}
+
 .lead {
     font-size: 18px;
     font-weight: 400;
@@ -354,6 +358,10 @@ a {
 .nav .open > a:focus {
   background-color: #222;
   border-color: #00f;
+}
+
+.nav > li > a {
+  border-bottom: 4px solid transparent;
 }
 
 .nav > li > a:hover,
