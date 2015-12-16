@@ -6,15 +6,11 @@ body,
 html {
     width: 100%;
     height: 100%;
+    background-color: #F8F8F8;
 }
 
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
@@ -283,7 +279,7 @@ ul.unstyled, ol.unstyled {
         box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
 
-/* Joomla Module Tweaks */
+/* Joomla Specific Tweaks */
 /* Login form input alignment: */
 form#login-form > div > div, form#login-form > div > div > div, form#login-form > div > div > div > div {
     width: 100%;
@@ -299,8 +295,16 @@ form#login-form input {
     right: 8px;
 }
 
-/* UDDEModule */
+.readmore > .btn:hover, .readmore > .btn:focus {
+  color: #C00;
+}
 
+/* UDDEModule CSS */
+
+#uddeim-modulenew,
+#uddeim-module {
+  font-size: 11px;
+}
 #uddeim-module p.uddeim-module-head,
 #uddeim-modulenew p.uddeim-module-head,
 #uddeim-module p.uddeim-module-body,
@@ -316,6 +320,18 @@ form#login-form input {
 
 a {
   color: #C00;
+}
+
+p a {
+  color: #00C;
+}
+
+a:hover, a:focus {
+    color: #C00;
+}
+
+.menu a:hover, .menu a:focus {
+  color: #F00;
 }
 
 .page-header {
@@ -373,7 +389,7 @@ a {
 
 .nav-stacked > li > a:hover,
 .nav-stacked > li > a:focus {
-  border-bottom: 1px solid transparent;
+  border-bottom: 4px solid transparent;
   border-left: 4px solid #f00;
 }
 
@@ -398,10 +414,4 @@ a {
 
 .nav-pills > .active > a > .badge {
   color: #f00;
-}
-
-/* udde module styling */
-#uddeim-modulenew,
-#uddeim-module {
-  font-size: 11px;
 }
