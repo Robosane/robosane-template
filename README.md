@@ -2,17 +2,20 @@
 Robosane's Top-Secret new Website Appearance,  
 But it's not so secret anymore.  
 
+View how it looks at https://robosane.net/
+
 Features:
- * Correct Twitter cards for Article Pages
+ * Twitter Cards support!
  * Mobile native experience
  * Desktop all resolution support
- * Bootstrap based, modern coding standards.
- * Best experienced in Chrome, all platforms
+ * Bootstrap based, up-to-date standards
+ * Designed with help from Chrome Dev Tools
+ * Works in most browsers (darn IE)
 
-Before using this, be sure to TEST IT and ask me. I have only ever tested this template on https://robosane.net/
+Before putting this onto a live site, you'll probably want to go through a few tests, as there are numerous options and settings that should be configured for the template to look like it should.
 
 All bootstrap override CSS is mainly in css/robosane.css
-If needed, the template includes it's own versions of bootstrap and jQuery that are known to work, simply switch the includes in index.php if needed.
+If needed, the template includes it's own versions of bootstrap and jQuery that are known to work, simply switch the includes in index.php if the Joomla ones don't work.
 
 TLDR Legal things:
 ---
