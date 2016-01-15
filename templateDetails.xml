@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.6.3" type="template" client="site">
+<extension version="3.6.4" type="template" client="site">
         <name>Robosane</name>
-        <version>3.6.3</version>
+        <version>3.6.4</version>
         <creationDate>March 2015</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@robosane.net</authorEmail>
@@ -65,13 +65,17 @@
 
                                 <field name="twitter_default-title" type="text" default="Robosane"
                                         label="Default Twitter Title"
-                                        description="The Title of the article to show when the real one can't be loaded."
+                                        description="The Title of the article to show when one can't be loaded, or is the front page."
                                         filter="string" />
 
                                 <field name="twitter_default-desc" type="text" default=""
                                         label="Default Twitter Description"
-                                        description="The Description for Twitter to access when one can't be loaded from the article introtext."
+                                        description="The Description for Twitter to access when we're not on an article page or are on the homepage"
                                         filter="string" />
+
+                                <field name="twitter_default-img" type="media" default=""
+                                        label="Default Twitter Image"
+                                        description="The image to display as a thumbnail for summary cards." />
 
                         </fieldset>
                 </fields>

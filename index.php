@@ -62,6 +62,7 @@ if ($this->countModules('position-7')) {
         echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
         echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
         echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
+        echo '<meta name="twitter:image" content="' . $this->params->get('twitter_default-img') . '" />';
       }
       else {
         //echo 'This is not the front page';
