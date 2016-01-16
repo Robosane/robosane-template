@@ -1,7 +1,7 @@
 /*!
  * Robosane Joomla Template Theeem CSS.
  */
-
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 body,
 html {
     width: 100%;
@@ -11,7 +11,7 @@ html {
 
 body,
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
 }
 
@@ -23,6 +23,15 @@ p > img {
 
 .btn {
   white-space: normal;
+    border: 0;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all .2s ease;
+    box-shadow: 0px 0px 50px -20px transparent;
+}
+
+.btn:hover {
+    box-shadow: 0px 5px 10px -5px #000;
 }
 
 .cbMenu > li > a {
@@ -33,10 +42,13 @@ p > img {
     /*font-size: 14px;*/
     background-color: #000;
     text-transform: uppercase;
+    border: 0;
+    box-shadow: 0px 5px 10px -20px #000;
 }
 
 .topnav > .navbar {
-  margin-bottom: 0;
+    margin-bottom: 0;
+    border: 5px solid #fff;
 }
 
 .lead {
@@ -327,7 +339,7 @@ a:hover, a:focus {
 }
 
 .menu a:hover, .menu a:focus {
-  color: #F00;
+  color: #fff;
 }
 
 .page-header {
@@ -335,7 +347,7 @@ a:hover, a:focus {
 }
 
 .dropdown-header {
-  background-color: #f00;
+  background-color: #D9042B;
   border-radius: 0px;
 }
 
@@ -343,7 +355,7 @@ a:hover, a:focus {
   float: none;
   text-align: left;
   list-style: none;
-  background-color: #f00;
+  background-color: #D9042B;
   border-radius: 0px;
 }
 
@@ -356,7 +368,7 @@ a:hover, a:focus {
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #f00;
+  color: #fff;
   text-decoration: none;
   background-color: #222;
 }
@@ -380,13 +392,13 @@ a:hover, a:focus {
 .nav > li > a:focus {
   text-decoration: none;
   background-color: transparent;
-  border-bottom: 4px solid #f00;
+  border-bottom: 4px solid #D9042B;
 }
 
 .nav-stacked > li > a:hover,
 .nav-stacked > li > a:focus {
   border-bottom: 4px solid transparent;
-  border-left: 4px solid #f00;
+  border-left: 4px solid #D9042B;
 }
 
 .nav-pills > li {
@@ -394,7 +406,9 @@ a:hover, a:focus {
 }
 
 .nav-pills > li > a {
+  color: #bbb;
   border-radius: 0px;
+  padding: 15px;
 }
 
 .nav-pills > li + li {
@@ -404,10 +418,16 @@ a:hover, a:focus {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #000;
-  background-color: #f00;
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 4px solid #D9042B;
 }
 
 .nav-pills > .active > a > .badge {
-  color: #f00;
+  color: #fff;
+}
+
+.navbar-brand {
+    padding: 17px;
+    padding-left: 50px;
 }
