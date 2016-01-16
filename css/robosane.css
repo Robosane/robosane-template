@@ -33,6 +33,8 @@ p > img {
     /*font-size: 14px;*/
     background-color: #000;
     text-transform: uppercase;
+    font-family: "Ubuntu","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
 }
 
 .topnav > .navbar {

@@ -4,7 +4,7 @@
  * @subpackage  Templates.robosane
  *
  * @copyright   Copyright (C) Ben Klein, Robosane
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * @license     Mozilla Public License Version 2.0
  */
 
 defined('_JEXEC') or die;

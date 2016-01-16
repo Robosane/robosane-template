@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.6.4" type="template" client="site">
+<extension version="3.6.5" type="template" client="site">
         <name>Robosane</name>
-        <version>3.6.4</version>
-        <creationDate>March 2015</creationDate>
+        <version>3.6.5</version>
+        <creationDate>March 2015 to January 2016</creationDate>
         <author>Ben Klein</author>
-        <authorEmail>robobenklein@robosane.net</authorEmail>
-        <copyright>Copyright (C) Ben Klein, 2015.</copyright>
-        <description>A strikingly simple and modern look, built with Bootstrap.</description>
+        <authorEmail>robobenklein@gmail.com</authorEmail>
+        <copyright>Copyright (C) Ben Klein, 2016.</copyright>
+        <description>A strikingly simple and clean look, for the open-source lovers like me.</description>
         <files>
                 <filename>index.php</filename>
                 <filename>component.php</filename>
@@ -58,12 +58,12 @@
 					                              <option value="0">JNO</option>
                                 </field>
 
-                                <field name="twitter_sitename" type="text" default="@robosane"
+                                <field name="twitter_sitename" type="text" default="@"
                                         label="Twitter site name"
                                         description="The @username to associate this card with for analytics. (include the @)"
                                         filter="string" />
 
-                                <field name="twitter_default-title" type="text" default="Robosane"
+                                <field name="twitter_default-title" type="text" default=""
                                         label="Default Twitter Title"
                                         description="The Title of the article to show when one can't be loaded, or is the front page."
                                         filter="string" />

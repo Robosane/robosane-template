@@ -1,9 +1,10 @@
 <?php
 /**
- * Robosane template for robosane.net
+ * @package     Joomla.Site
+ * @subpackage  Templates.robosane
  *
- * @copyright   Copyright (C) Ben Klein
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * @copyright   Copyright (C) Ben Klein, Robosane
+ * @license     Mozilla Public License Version 2.0
  */
 
 defined('_JEXEC') or die;
@@ -86,6 +87,7 @@ if ($this->countModules('position-7')) {
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
 
     <!-- CSS for changing header background -->
     <style>
