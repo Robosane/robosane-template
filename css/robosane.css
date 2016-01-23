@@ -413,3 +413,44 @@ a:hover, a:focus {
 .nav-pills > .active > a > .badge {
   color: #f00;
 }
+
+/* Fancy current item menus */
+li.active.current {
+  position: relative;
+  top: 0px;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 0px;
+  height: auto;
+  width: auto;
+}
+li.active.current:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  width: 50%;
+  background: red;
+  -webkit-transform: skew(0deg, 20deg);
+  -moz-transform: skew(0deg, 20deg);
+  -ms-transform: skew(0deg, 20deg);
+  -o-transform: skew(0deg, 20deg);
+  transform: skew(0deg, 20deg);
+}
+li.active.current:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 110%;
+  width: 50%;
+  background: red;
+  -webkit-transform: skew(0deg, -20deg);
+  -moz-transform: skew(0deg, -20deg);
+  -ms-transform: skew(0deg, -20deg);
+  -o-transform: skew(0deg, -20deg);
+  transform: skew(0deg, -20deg);
+}
