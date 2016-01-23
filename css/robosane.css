@@ -376,7 +376,7 @@ a:hover, a:focus {
 
 .nav > li > a {
   border-bottom: 4px solid transparent;
-  color: #f00
+  color: #f8f8f8;
 }
 
 .nav > li > a:hover,
