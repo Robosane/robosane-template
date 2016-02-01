@@ -8,7 +8,6 @@ html {
     height: 100%;
     background-color: #F8F8F8;
 }
-
 body,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -36,7 +35,6 @@ p > img {
     font-family: "Ubuntu","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
-
 .topnav > .navbar {
   margin-bottom: 0;
 }
@@ -51,19 +49,16 @@ p > img {
     padding-top: 20%;
     padding-bottom: 20%;
 }
-
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
 }
-
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
-
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
@@ -121,7 +116,6 @@ p > img {
 .section-heading {
     margin-bottom: 30px;
 }
-
 .section-heading-spacer {
     float: left;
     width: 200px;
@@ -133,7 +127,6 @@ p > img {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 3em;
 }
-
 .banner ul {
     margin-bottom: 0;
 }
@@ -279,7 +272,12 @@ ul.unstyled, ol.unstyled {
 
 /* Joomla Specific Tweaks */
 /* Login form input alignment: */
-form#login-form > div > div, form#login-form > div > div > div, form#login-form > div > div > div > div {
+form#login-form > div > div,
+form#login-form > div > div > div,
+form#login-form > div > div > div > div,
+form#login-form #form-login-submit .btn-primary,
+form#login-form > .logout-button,
+form#login-form > .logout-button > .btn-primary {
     width: 100%;
 }
 form#login-form * {
@@ -292,13 +290,15 @@ form#login-form input {
     float: right;
     right: 8px;
 }
+form#login-form .btn-primary {
+    font-weight: bold;
+}
 
 .readmore > .btn:hover, .readmore > .btn:focus {
   color: #C00;
 }
 
 /* UDDEModule CSS */
-
 #uddeim-modulenew,
 #uddeim-module {
   font-size: 11px;
@@ -315,15 +315,12 @@ form#login-form input {
 /* Bootstrap Overrides */
 /* Cuz bootstrap need a change. */
 /* At least for my purposes. */
-
 a {
   color: #C00;
 }
-
 p a {
   color: #00C;
 }
-
 a:hover, a:focus {
     color: #C00;
 }
@@ -335,12 +332,10 @@ a:hover, a:focus {
 .page-header {
   margin: 10px 0 10px;
 }
-
 .dropdown-header {
   background-color: #ed2024;
   border-radius: 0px;
 }
-
 .dropdown-menu {
   float: none;
   text-align: left;
@@ -348,14 +343,12 @@ a:hover, a:focus {
   background-color: #ed2024;
   border-radius: 0px;
 }
-
 .dropdown-menu > li > a {
   color: #ddd;
   background-color: #222;
   padding: 3px 20px;
   font-weight: bold;
 }
-
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #ed2024;
@@ -366,20 +359,17 @@ a:hover, a:focus {
 .nav {
   padding-top: 6px;
 }
-
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #222;
   border-color: #00f;
 }
-
 .nav > li > a {
   transition: all .2s ease;
   border-bottom: 4px solid transparent;
   color: #f8f8f8;
 }
-
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
@@ -392,31 +382,26 @@ a:hover, a:focus {
   border-bottom: 4px solid transparent;
   border-left: 4px solid #ed2024;
 }
-
 .nav-pills > li {
   float: right;
 }
-
 .nav-pills > li > a {
   border-radius: 0px;
 }
-
 .nav-pills > li + li {
   margin-right: 2px;
 }
-
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #000;
   background-color: #ed2024;
 }
-
 .nav-pills > .active > a > .badge {
   color: #ed2024;
 }
 
-/* Fancy current item menus */
+/* Fancy current page chevron */
 li.active.current {
   position: relative;
   top: 0px;
