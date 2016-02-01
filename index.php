@@ -54,6 +54,10 @@ if ($this->countModules('position-7')) {
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
+
     <jdoc:include type="head" />
     <?php // Twitter cards!
     if ( $this->params->get('twittercards') == "1" ) {
@@ -84,10 +88,6 @@ if ($this->countModules('position-7')) {
       }
     } // end twitter cards
     ?>
-
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
 
     <!-- CSS for changing header background -->
     <style>
