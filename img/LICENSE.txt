@@ -1,0 +1,7 @@
+The Robosane branding is obviously not open-source as the rest of the project.
+
+The Robosane logo rights reserved, obviously by Robosane.
+
+The cmc1 to 3 images contain content that is owned by Mojang, from their game Minecraft.
+ We include these purely so you can test how the template looks without having to find more backgrounds.
+ We do not claim that these are our own, and neither should you.
