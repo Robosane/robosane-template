@@ -190,6 +190,7 @@ if ($this->countModules('position-7')) {
 <?php endif; ?>
 
 <!-- Footer -->
+<?php if ($this->countModules('footer')) : ?>
   <footer>
       <div class="container">
 <!-- And yet again trapped in position `footer` -->
@@ -197,5 +198,8 @@ if ($this->countModules('position-7')) {
 <!-- Free, at last -->
       </div>
   </footer>
+<?php endif; ?>
+
+<!-- Goodbye World -->
 </body>
 </html>
