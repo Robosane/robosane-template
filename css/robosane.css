@@ -419,6 +419,7 @@ li.active.current:before {
   left: 0;
   height: 110%;
   width: 50%;
+  width: calc(50% + 1px);
   background: #ed2024;
   -webkit-transform: skew(0deg, 20deg);
   -moz-transform: skew(0deg, 20deg);
