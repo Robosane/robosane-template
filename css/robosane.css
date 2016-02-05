@@ -38,6 +38,9 @@ p > img {
 .topnav > .navbar {
   margin-bottom: 0;
 }
+.topnav .nav li a {
+  color: #f8f8f8;
+}
 
 .lead {
     font-size: 18px;
@@ -368,7 +371,6 @@ a:hover, a:focus {
 .nav > li > a {
   transition: all .2s ease;
   border-bottom: 4px solid transparent;
-  color: #f8f8f8;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
