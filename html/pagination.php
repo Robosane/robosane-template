@@ -152,25 +152,25 @@ function pagination_item_active(&$item)
         // Check for "Start" item
         if ($item->text == JText::_('JLIB_HTML_START'))
         {
-                $display = '<i class="icon-first"></i>';
+                $display = '<i class="material-icons">skip_previous</i>';
         }
 
         // Check for "Prev" item
         if ($item->text == JText::_('JPREV'))
         {
-                $display = '<i class="icon-previous"></i>';
+                $display = '<i class="material-icons">chevron_left</i>';
         }
 
         // Check for "Next" item
         if ($item->text == JText::_('JNEXT'))
         {
-                $display = '<i class="icon-next"></i>';
+                $display = '<i class="material-icons">chevron_right</i>';
         }
 
         // Check for "End" item
         if ($item->text == JText::_('JLIB_HTML_END'))
         {
-                $display = '<i class="icon-last"></i>';
+                $display = '<i class="material-icons">skip_next</i>';
         }
 
         // If the display object isn't set already, just render the item with its text

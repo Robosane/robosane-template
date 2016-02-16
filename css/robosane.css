@@ -251,6 +251,9 @@ p.copyright {
         -moz-border-radius-bottomright: 4px;
         border-bottom-right-radius: 4px;
 }
+.pagination ul > li i.material-icons {
+  font-size: 14px;
+}
 
 ul.unstyled, ol.unstyled {
   margin-left: 0px;
