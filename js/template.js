@@ -76,6 +76,8 @@
     }) // end document .onready()
 })(jQuery);
 
+setTimeout(
+function (){
 (function($) {
     $(document).ready(function() {
         // Chosen issue from https://github.com/harvesthq/chosen/issues/92
@@ -89,3 +91,4 @@
         });
     }) // end document .onready()
 })(jQuery);
+}, 15);
