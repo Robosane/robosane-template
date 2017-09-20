@@ -30,7 +30,7 @@ $sitename = $app->getCfg('sitename');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/robosane.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/robosane-ed24.css');
 
 // Add current user information
 $user = JFactory::getUser();
