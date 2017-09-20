@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.7.0" type="template" method="upgrade" client="site">
-        <name>Robosane</name>
-        <version>3.7.0</version>
-        <creationDate>March 2015 to February 2016</creationDate>
+<extension version="4.0.0" type="template" method="upgrade" client="site">
+        <name>Robosane ED24</name>
+        <version>4.0.0</version>
+        <creationDate>March 2015 to September 2017</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@gmail.com</authorEmail>
-        <copyright>Copyright (C) Ben Klein, 2016.</copyright>
-        <description>A strikingly simple and clean look, for the open-source lovers like me.</description>
+        <copyright>Copyright (C) Ben Klein, 2017.</copyright>
+        <description>A flat, sleek look designed for Robosane.</description>
         <files>
                 <filename>index.php</filename>
                 <filename>component.php</filename>
@@ -18,16 +18,16 @@
                 <folder>html</folder>
                 <folder>fonts</folder>
                 <folder>less</folder>
-		            <folder>language</folder>
+		        <folder>language</folder>
         </files>
         <positions>
-                <position>position-0</position><!-- Header Backgrounded -->
-                <position>position-1</position><!-- Navigation -->
-                <position>footer-img</position><!-- Footer Image -->
+                <position>position-topnav</position><!-- Navigation -->
+                <position>position-splash-intro</position><!-- Splash intro -->
+                <position>position-content-before</position><!-- Above content -->
+                <position>position-content-breadcrumbs</position><!-- Below Content -->
+                <position>position-column-right</position><!-- Right sidebar -->
+                <position>position-splash-footer</position><!-- Footer Image -->
                 <position>footer</position><!-- Footer -->
-                <position>position-7</position><!-- Right sidebar -->
-                <position>position-3</position><!-- Above content -->
-                <position>position-2</position><!-- Below Content -->
         </positions>
         <config>
                 <fields name="params">
@@ -48,34 +48,6 @@
                                         label="Site Display Name"
                                         description="The text to display in the navbar next to the Site Logo."
                                         filter="string" />
-
-                                <field name="twittercards" type="radio" default="0"
-                                        label="Enable Twitter Cards"
-                                        description="Choose to enable the addition of the twitter cards meta tags on each page."
-                                        class="btn-group btn-group-yesno"
-                                        >
-                                        <option value="1">JYES</option>
-					                              <option value="0">JNO</option>
-                                </field>
-
-                                <field name="twitter_sitename" type="text" default="@"
-                                        label="Twitter site name"
-                                        description="The @username to associate this card with for analytics. (include the @)"
-                                        filter="string" />
-
-                                <field name="twitter_default-title" type="text" default=""
-                                        label="Default Twitter Title"
-                                        description="The Title of the article to show when one can't be loaded, or is the front page."
-                                        filter="string" />
-
-                                <field name="twitter_default-desc" type="text" default=""
-                                        label="Default Twitter Description"
-                                        description="The Description for Twitter to access when we're not on an article page or are on the homepage"
-                                        filter="string" />
-
-                                <field name="twitter_default-img" type="media" default=""
-                                        label="Default Twitter Image"
-                                        description="The image to display as a thumbnail for summary cards." />
 
                         </fieldset>
                 </fields>

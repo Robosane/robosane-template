@@ -42,9 +42,9 @@ JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
 
-if ($this->countModules('position-7')) {
+if ($this->countModules('position-column-right')) {
   $span = "col-md-9";
-} elseif (!$this->countModules('position-7')) {
+} elseif (!$this->countModules('position-column-right')) {
   $span = "col-md-12";
 }
 
@@ -60,35 +60,6 @@ if ($this->countModules('position-7')) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <jdoc:include type="head" />
-    <?php // Twitter cards!
-    if ( $this->params->get('twittercards') == "1" ) {
-      if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
-	      //echo 'This is the front page';
-        echo '<meta name="twitter:card" content="summary" />';
-        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
-        echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
-        echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
-        echo '<meta name="twitter:image" content="' . $this->params->get('twitter_default-img') . '" />';
-      }
-      else {
-        //echo 'This is not the front page';
-      	echo '<meta name="twitter:card" content="summary" />';
-        echo '<meta name="twitter:site" content="' . $this->params->get('twitter_sitename') . '" />';
-        try {
-          $input = JFactory::getApplication()->input;
-          $id = $input->getInt('id'); //get the article ID
-          $article = JTable::getInstance('content');
-          $article->load($id);
-
-          echo '<meta name="twitter:title" content="' . $article->get('title') . '" />'; // display the article title
-          echo '<meta name="twitter:description" content="' . str_replace(array('\'', '"'), '', strip_tags($article->get('introtext'))) . '" />'; // also 'fulltext' might work
-        } catch (Exception $e) {
-          echo '<meta name="twitter:title" content="' . $this->params->get('twitter_default-title') . '" />';
-          echo '<meta name="twitter:description" content="' . $this->params->get('twitter_default-desc') . '" />';
-        }
-      }
-    } // end twitter cards
-    ?>
 
     <!-- CSS for changing header background -->
     <style>
@@ -121,35 +92,35 @@ if ($this->countModules('position-7')) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div style="display:block; position: fixed;">
+                <div style="display:block; position: fixed;z-index: 1;">
                 <a href="<?php echo $this->baseurl; ?>">
                   <!-- Generated Site logo -->
                   <img src="<?php echo $this->params->get('siteLogo');?>" width="60px" height="auto"></img>
                 </a>
                 </div>
-                <a class="topnav navbar-brand" style="padding-left: 80px; text-transform: lowercase;" href="<?php echo $this->baseurl; ?>">
+                <a class="topnav navbar-brand" style="padding-left: 80px;" href="<?php echo $this->baseurl; ?>">
                   <?php echo $this->params->get('sitename');?>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <!-- Generated (Menu/Navigation position: "navigation") -->
-              <jdoc:include type="modules" name="position-1" style="none" />
+              <!-- Generated (Menu/Navigation position) -->
+              <jdoc:include type="modules" name="position-topnav" style="none" />
               <!-- Not Generated -->
             </div>
         </div>
     </nav>
 
 <!-- Image Header -->
-<?php if ($this->countModules('position-0')) : ?>
+<?php if ($this->countModules('position-splash-intro')) : ?>
   <div class="intro-header" id="intro-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="intro-message">
-<!-- This should be a module position: `header` -->
-            <jdoc:include type="modules" name="position-0" style="none" />
-<!-- No longer under the demonizing control of Joomla -->
+<!-- This should be a module position -->
+            <jdoc:include type="modules" name="position-splash-intro" style="none" />
+<!-- Done with splash include. -->
           </div>
         </div>
       </div>
@@ -161,16 +132,16 @@ if ($this->countModules('position-7')) {
   <div class="container">
     <div class="<?php echo $span;?>">
 <!-- Begin Joomla primary Article/News whatever kind of content. -->
-      <jdoc:include type="modules" name="position-3" style="xhtml" />
+      <jdoc:include type="modules" name="position-content-before" style="xhtml" />
       <jdoc:include type="message" />
       <jdoc:include type="component" />
-      <jdoc:include type="modules" name="position-2" style="none" />
+      <jdoc:include type="modules" name="position-content-breadcrumbs" style="none" />
 <!-- Not generated -->
     </div>
-<?php if ($this->countModules('position-7')) : ?>
+<?php if ($this->countModules('position-column-right')) : ?>
     <div class="col-md-3" style="left: 0px;">
 <!-- Right column module position -->
-      <jdoc:include type="modules" name="position-7" style="well" />
+      <jdoc:include type="modules" name="position-column-right" style="well" />
 <!-- Close right column -->
     </div>
 <?php endif; ?>
@@ -178,13 +149,13 @@ if ($this->countModules('position-7')) {
 </div>
 
 <!-- Image background footer -->
-<?php if ($this->countModules('position-15')) : ?>
+<?php if ($this->countModules('position-splash-footer')) : ?>
   <div class="banner">
     <div class="container">
       <div class="row">
-<!-- Stuff Generated by Joomla for position `footer-image` -->
-        <jdoc:include type="modules" name="position-15" style="none" />
-<!-- Again free from Joomla's oppressive grasp. -->
+<!-- Stuff Generated by Joomla for position -->
+        <jdoc:include type="modules" name="position-splash-footer" style="none" />
+<!-- Generated. -->
       </div>
     </div>
   </div>
