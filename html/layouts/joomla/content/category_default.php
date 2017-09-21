@@ -1,10 +1,10 @@
 <?php
 /**
- * RoboStar Template by Ben Klein
- * Template based from Protostar
+ * @package     Joomla.Site
+ * @subpackage  Templates.robosane
  *
- * @copyright   Copyright (C) Ben Klein
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * @copyright   Copyright (C) Ben Klein, Robosane
+ * @license     Mozilla Public License Version 2.0
  */
 
 defined('JPATH_BASE') or die;
@@ -62,4 +62,3 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
                 <?php endif; ?>
         </div>
 </div>
-

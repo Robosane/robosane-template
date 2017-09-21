@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="4.0.0" type="template" method="upgrade" client="site">
+<extension version="4.0.1" type="template" method="upgrade" client="site">
         <name>Robosane ED24</name>
-        <version>4.0.0</version>
+        <version>4.0.1</version>
         <creationDate>March 2015 to September 2017</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@gmail.com</authorEmail>
@@ -38,13 +38,13 @@
 
                                 <field name="headerBackground" type="media" default=""
                                         label="Header Image"
-                                        description="Picture to use as the header background, if there is a module in the header position." />
+                                        description="Picture to use as the header background, if there is a module in the splash header position." />
 
                                 <field name="footerImage" type="media" default=""
                                         label="Footer Image"
                                         description="The Image to use as the footer for the page, if there are modules in the 'footer-image' position." />
 
-                                <field name="sitename" type="text" default=""
+                                <field name="sitename" type="text" default="sitename"
                                         label="Site Display Name"
                                         description="The text to display in the navbar next to the Site Logo."
                                         filter="string" />

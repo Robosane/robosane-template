@@ -1,5 +1,5 @@
 /**
- * Robosan3 Template by Ben Klein
+ * Robosane ED24 template by Ben Klein
  *
  */
 
@@ -91,4 +91,4 @@ function (){
         });
     }) // end document .onready()
 })(jQuery);
-}, 15);
+}, 10);
