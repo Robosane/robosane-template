@@ -78,17 +78,19 @@
 
 setTimeout(
 function (){
-(function($) {
-    $(document).ready(function() {
-        // Chosen issue from https://github.com/harvesthq/chosen/issues/92
-        // Still open after this long?
-        // don't let the width to be "0"
-        var chzn_check_targets = ".chzn-container,.chzn-container-single"
-        $(chzn_check_targets).each(function(){
-            if($(this).width() == 0){
-                $(this).width('auto');
-            }
-        });
-    }) // end document .onready()
-})(jQuery);
-}, 10);
+    (function($) {
+        $(document).ready(function() {
+            // Chosen issue from https://github.com/harvesthq/chosen/issues/92
+            // Still open after this long?
+            // don't let the width to be "0"
+            var chzn_check_targets = ".chzn-container,.chzn-container-single"
+            $(chzn_check_targets).each(function(){
+                if($(this).width() == 0){
+                    $(this).width('auto');
+                }
+            });
+            // apply two-column layout as bootstrap col
+            jQuery(".items-row.cols-2 > div > .item").addClass("col-sm-6")
+        }) // end document .onready()
+    })(jQuery);
+}, 5);

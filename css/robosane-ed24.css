@@ -437,6 +437,7 @@ a:hover, a:focus {
 }
 
 /* Fancy current page chevron */
+@media(min-width:768px){
 li.active.current {
   position: relative;
   top: 0px;
@@ -456,11 +457,11 @@ li.active.current:before {
   width: 50%;
   width: calc(50% + 1px);
   background: #ed2024;
-  -webkit-transform: skew(0deg, 20deg);
-  -moz-transform: skew(0deg, 20deg);
-  -ms-transform: skew(0deg, 20deg);
-  -o-transform: skew(0deg, 20deg);
-  transform: skew(0deg, 20deg);
+  -webkit-transform: skew(0deg, 20deg) translateZ(-1px);
+  -moz-transform: skew(0deg, 20deg) translateZ(-1px);
+  -ms-transform: skew(0deg, 20deg) translateZ(-1px);
+  -o-transform: skew(0deg, 20deg) translateZ(-1px);
+  transform: skew(0deg, 20deg) translateZ(-1px);
 }
 li.active.current:after {
   z-index: -1;
@@ -471,9 +472,24 @@ li.active.current:after {
   height: 110%;
   width: 50%;
   background: #ed2024;
-  -webkit-transform: skew(0deg, -20deg);
-  -moz-transform: skew(0deg, -20deg);
-  -ms-transform: skew(0deg, -20deg);
-  -o-transform: skew(0deg, -20deg);
-  transform: skew(0deg, -20deg);
+  -webkit-transform: skew(0deg, -20deg) translateZ(-1px);
+  -moz-transform: skew(0deg, -20deg) translateZ(-1px);
+  -ms-transform: skew(0deg, -20deg) translateZ(-1px);
+  -o-transform: skew(0deg, -20deg) translateZ(-1px);
+  transform: skew(0deg, -20deg) translateZ(-1px);
+}
+} /* end chevrons */
+
+@media(max-width:767px){
+    .nav-pills > li {
+        float: initial;
+    }
+    .nav-pills > li + li {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .navbar-collapse {
+        padding-top: 24px;
+        margin-bottom: 12px;
+    }
 }
