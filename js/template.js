@@ -76,7 +76,7 @@
     }) // end document .onready()
 })(jQuery);
 
-setTimeout(
+setTimeout(// move to end of execution stack
 function (){
     (function($) {
         $(document).ready(function() {
