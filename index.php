@@ -29,8 +29,8 @@ $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.min.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/robosane-ed24.css');
+$doc->addStyleSheet($this->baseurl .'templates/' .$this->template .'/css/bootstrap.min.css');
+$doc->addStyleSheet($this->baseurl .'templates/' .$this->template .'/css/robosane-ed24.css');
 
 // Add current user information
 $user = JFactory::getUser();
@@ -40,7 +40,7 @@ JHtml::_('jquery.framework');
 //$doc->addScript('templates/' .$this->template. '/js/jquery.js');
 JHtml::_('bootstrap.framework');
 //$doc->addScript('templates/' .$this->template. '/js/bootstrap.js');
-$doc->addScript('templates/' .$this->template. '/js/template.js');
+$doc->addScript($this->baseurl .'templates/' .$this->template .'/js/template.js');
 
 if ($this->countModules('position-column-right')) {
   $span = "col-md-9";
@@ -49,7 +49,6 @@ if ($this->countModules('position-column-right')) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
