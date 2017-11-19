@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" method="upgrade" client="site">
         <name>Robosane ED24</name>
-        <version>4.0.1</version>
+        <version>4.0.2</version>
         <creationDate>March 2015 to September 2017</creationDate>
         <author>Ben Klein</author>
         <authorEmail>robobenklein@gmail.com</authorEmail>

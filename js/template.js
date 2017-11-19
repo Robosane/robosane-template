@@ -83,9 +83,11 @@ function (){
             // Chosen issue from https://github.com/harvesthq/chosen/issues/92
             // Still open after this long?
             // don't let the width to be "0"
+            // 2017-11-19 update: why are some fields 1.988636px or whatever?
+            // just don't let any small fields exist...
             var chzn_check_targets = ".chzn-container,.chzn-container-single"
             $(chzn_check_targets).each(function(){
-                if($(this).width() == 0){
+                if($(this).width() < 24){
                     $(this).width('auto');
                 }
             });
