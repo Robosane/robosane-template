@@ -87,8 +87,8 @@ function (){
             // just don't let any small fields exist...
             var chzn_check_targets = ".chzn-container,.chzn-container-single"
             $(chzn_check_targets).each(function(){
-                if($(this).width() < 24){
-                    $(this).width('auto');
+                if($(this).width() < 2){
+                    $(this).width('100%');
                 }
             });
             // apply two-column layout as bootstrap col
